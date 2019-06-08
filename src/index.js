@@ -6,6 +6,11 @@ import store from "./ducks";
 import GlobalStyle from "./global-style";
 import App from "./app";
 
+// Blue print css
+import "../node_modules/normalize.css";
+import "../node_modules/@blueprintjs/core/lib/css/blueprint.css";
+import "../node_modules/@blueprintjs/table/lib/css/table.css";
+
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
