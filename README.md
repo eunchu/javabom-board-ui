@@ -1,14 +1,14 @@
 ## Javabom study
 
-- First project : java spring을 이용한 게시판 만들기
+- First project : java spring을 이용한 게시판 UI 만들기
 
-### API Spec
+### Spec
 
-1. Get all articles
-2. Get an article
-3. Post an article
-4. Edit an article
-5. Delete an article
+1. 게시글 조회
+2. 게시글 작성
+3. 게시글 생성
+4. 게시글 수정
+5. 게시글 삭제
 
 https://docs.gentooboy.com/javabom/board-api
 
@@ -17,7 +17,6 @@ https://docs.gentooboy.com/javabom/board-api
 **UI Library**
 
 - Blueprint
-- UIkit
 
 ### Start app
 
