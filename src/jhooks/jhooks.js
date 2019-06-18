@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 /**
  *
@@ -77,4 +77,17 @@ export const useHover = onHover => {
   }, [onHover]);
 
   return element;
+};
+
+/**
+ * popup on/off 용 hook
+ */
+export const useModal = () => {
+  const [isShowing, setIsShowing] = useState(false);
+
+  const toggle = () => {
+    setIsShowing(!isShowing);
+  };
+
+  return { isShowing, toggle };
 };
