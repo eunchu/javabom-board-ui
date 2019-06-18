@@ -4,6 +4,9 @@ import styled from "styled-components";
 
 import LogoIcon from "../../../assets/img/flower.png";
 
+import { useModal } from "../../../jhooks";
+
+import Popup from "../../2-molecules/popup/popup";
 import Table from "../../2-molecules/table-antd/table";
 
 /* ======= Constants ======= */
@@ -68,6 +71,8 @@ function Board({ width, height }) {
     }
   ];
 
+  const { isShowing, toggle } = useModal();
+
   return (
     <Container width={width} height={height}>
       <div style={{ ...FLEX, marginBottom: "1.6rem" }}>
@@ -84,10 +89,11 @@ function Board({ width, height }) {
         dataSource={DATA}
         onRow={(record, rowIndex) => {
           return {
-            onClick: () => {}
+            onClick: { toggle }
           };
         }}
       />
+      <Popup isShowing={isShowing} hide={toggle} />
     </Container>
   );
 }
