@@ -6,6 +6,9 @@ import store from "./ducks";
 import GlobalStyle from "./global-style";
 import App from "./app";
 
+// antd css
+import "antd/dist/antd.css";
+
 // Blue print css
 import "../node_modules/normalize.css";
 import "../node_modules/@blueprintjs/core/lib/css/blueprint.css";
