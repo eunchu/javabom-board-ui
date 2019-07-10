@@ -1,1 +1,1 @@
-export { useClick, useFadeIn, useHover, useTabs, useModal } from "./jhooks";
+export { useModal } from "./jhooks";

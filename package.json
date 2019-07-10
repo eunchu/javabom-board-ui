@@ -6,6 +6,7 @@
     "@blueprintjs/core": "^3.15.1",
     "@blueprintjs/table": "^3.5.0",
     "antd": "^3.19.4",
+    "fxjs2": "^0.2.7",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

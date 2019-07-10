@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 /**
  *
@@ -8,6 +8,7 @@ import React, { useState, useEffect, useRef } from "react";
 export const useTabs = (initialTab, allTabs) => {
   if (!allTabs || !Array.isArray(allTabs)) return;
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [currentIndex, setCurrentIndex] = useState(initialTab);
   return {
     currentItem: allTabs[currentIndex],
@@ -22,14 +23,17 @@ export const useTabs = (initialTab, allTabs) => {
 export const useClick = onClick => {
   if (typeof onClick !== "function") return;
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const element = useRef();
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     if (element.current) {
       element.current.addEventListener("click", onClick);
     }
     return () => {
       if (element.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         element.current.removeEventListener("click", onClick);
       }
     };
@@ -45,7 +49,9 @@ export const useClick = onClick => {
  */
 export const useFadeIn = (duration = 1, delay = 0) => {
   if (typeof duration !== "number" || typeof delay !== "number") return;
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const element = useRef();
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     if (element.current) {
       const { current } = element;
@@ -63,14 +69,17 @@ export const useFadeIn = (duration = 1, delay = 0) => {
 export const useHover = onHover => {
   if (typeof onHover !== "function") return;
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const element = useRef();
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     if (element.current) {
       element.current.addEventListener("mouseenter", onHover);
     }
     return () => {
       if (element.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         element.current.removeEventListener("mouseenter", onHover);
       }
     };
